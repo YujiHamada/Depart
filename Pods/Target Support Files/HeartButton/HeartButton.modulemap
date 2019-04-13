@@ -1,0 +1,6 @@
+framework module HeartButton {
+  umbrella header "HeartButton-umbrella.h"
+
+  export *
+  module * { export * }
+}
