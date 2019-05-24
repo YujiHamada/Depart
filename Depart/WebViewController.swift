@@ -23,7 +23,9 @@ class WebViewController: UIViewController {
         
         let flexible = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: self, action: nil)
         let shareButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.action, target: self, action: #selector(self.share))
+        shareButton.imageInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0, right: 30)
         let closeButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.stop, target: self, action: #selector(self.close))
+        closeButton.imageInsets = UIEdgeInsets(top: 4.0, left: 0.0, bottom: 0, right: 15)
         
         bottomToolbar.items = [flexible, shareButton, closeButton]
         
@@ -38,24 +40,12 @@ class WebViewController: UIViewController {
     }
     
     @objc func share() {
-        let shareText = "Apple - Apple Watch"
-        let shareWebsite = NSURL(string: "https://www.apple.com/jp/watch/")!
+        let shareText = webView.title
+        let shareWebsite = NSURL(string: url)!
         
-        let activityItems = [shareText, shareWebsite] as [Any]
+        let activityItems = [shareText!, shareWebsite] as [Any]
         let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
         
         self.present(activityVC, animated: true, completion: nil)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

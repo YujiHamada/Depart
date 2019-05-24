@@ -17,7 +17,7 @@
 		CA182D9E21F0D1D200C93EDE /* GoogleNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA182D9D21F0D1D200C93EDE /* GoogleNews.swift */; };
 		CA182DC421FD495C00C93EDE /* GoogleNewsWithoutImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA182DC221FD495C00C93EDE /* GoogleNewsWithoutImageTableViewCell.swift */; };
 		CA182DC521FD495C00C93EDE /* GoogleNewsWithoutImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA182DC321FD495C00C93EDE /* GoogleNewsWithoutImageTableViewCell.xib */; };
-		CA52219122100605006C240C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA52219022100605006C240C /* GoogleService-Info.plist */; };
+		CA1CF7BD2261790B00DEB53E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA1CF7BC2261790B00DEB53E /* GoogleService-Info.plist */; };
 		CA6756F02259CC6A001F1F86 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6756EF2259CC69001F1F86 /* WebKit.framework */; };
 		CA8B831421ECAF77001A6820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B831321ECAF77001A6820 /* AppDelegate.swift */; };
 		CA8B831621ECAF77001A6820 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B831521ECAF77001A6820 /* ViewController.swift */; };
@@ -44,7 +44,7 @@
 		CA182D9D21F0D1D200C93EDE /* GoogleNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleNews.swift; sourceTree = "<group>"; };
 		CA182DC221FD495C00C93EDE /* GoogleNewsWithoutImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleNewsWithoutImageTableViewCell.swift; sourceTree = "<group>"; };
 		CA182DC321FD495C00C93EDE /* GoogleNewsWithoutImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoogleNewsWithoutImageTableViewCell.xib; sourceTree = "<group>"; };
-		CA52219022100605006C240C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA1CF7BC2261790B00DEB53E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA52219222115DE9006C240C /* Depart.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Depart.entitlements; sourceTree = "<group>"; };
 		CA6756EF2259CC69001F1F86 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CA8B831021ECAF77001A6820 /* Depart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Depart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,8 +110,8 @@
 		CA8B831221ECAF77001A6820 /* Depart */ = {
 			isa = PBXGroup;
 			children = (
+				CA1CF7BC2261790B00DEB53E /* GoogleService-Info.plist */,
 				CA52219222115DE9006C240C /* Depart.entitlements */,
-				CA52219022100605006C240C /* GoogleService-Info.plist */,
 				CA182D9C21F0B8E400C93EDE /* GoogleNews */,
 				CA182D9821EF7C8A00C93EDE /* UIView+constraints.swift */,
 				CA8B831321ECAF77001A6820 /* AppDelegate.swift */,
@@ -215,7 +215,7 @@
 			files = (
 				CA8B832121ECAF7C001A6820 /* LaunchScreen.storyboard in Resources */,
 				CA8B831E21ECAF7C001A6820 /* Assets.xcassets in Resources */,
-				CA52219122100605006C240C /* GoogleService-Info.plist in Resources */,
+				CA1CF7BD2261790B00DEB53E /* GoogleService-Info.plist in Resources */,
 				CA04071521FF598000623A8F /* WebView.storyboard in Resources */,
 				CAAD896221ECB2460056A11B /* GoogleNews.storyboard in Resources */,
 				CAAD896621ECB2730056A11B /* Blogos.storyboard in Resources */,
@@ -448,7 +448,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2B346P935N;
 				INFOPLIST_FILE = Depart/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.depart-info.ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -465,7 +468,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2B346P935N;
 				INFOPLIST_FILE = Depart/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.depart-info.ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
