@@ -36,6 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         Messaging.messaging().subscribe(toTopic: "all") { error in
         }
         
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        
         return true
     }
     
