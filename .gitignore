@@ -1,1 +1,4 @@
 Depart/GoogleService-Info.plist
+.DS_Store
+*.swp
+UserInterfaceState.xcuserstate
