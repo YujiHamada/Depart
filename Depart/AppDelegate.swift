@@ -94,7 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             let viewController: WebViewController = storyboard.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
             viewController.url = url
             let navigationController = self.window?.rootViewController as! UINavigationController
-            navigationController.pushViewController(viewController, animated: false)
+            navigationController.present(viewController, animated: false)
         }
         
         print(userInfo)
