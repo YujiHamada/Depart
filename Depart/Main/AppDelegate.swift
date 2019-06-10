@@ -38,6 +38,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         UIApplication.shared.applicationIconBadgeNumber = 0
         
+        let userDefaults = UserDefaults.standard
+        let subscribeRss = userDefaults.array(forKey: SelectRssTableViewController.SUBSCRIBE_RSS)
+        if subscribeRss == nil {
+            self.window?.rootViewController = SelectRssTableViewController.getInstance()
+        } else {
+            let sb = UIStoryboard.init(name: "Tabbar", bundle: nil)
+            let tabBarViewcontroller = sb.instantiateViewController(withIdentifier: "TabBarViewController")
+            self.window?.rootViewController = tabBarViewcontroller
+        }
+        
+        
         return true
     }
     

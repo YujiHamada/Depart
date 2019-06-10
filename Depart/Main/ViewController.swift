@@ -31,19 +31,27 @@ class CustomPagingViewController: FixedPagingViewController {
 
 class ViewController: UIViewController {
     
-    let pagingViewController = CustomPagingViewController(viewControllers: [
-        GoogleNewsViewController.instantiateViewController(title: "百貨店", rssUrl: "https://s3-ap-northeast-1.amazonaws.com/depart-rss/Departs.json"),
-        GoogleNewsViewController.instantiateViewController(title: "SC", rssUrl: "https://s3-ap-northeast-1.amazonaws.com/depart-rss/SC.json"),
-        GoogleNewsViewController.instantiateViewController(title: "アパレル", rssUrl: "https://s3-ap-northeast-1.amazonaws.com/depart-rss/Apparel.json"),
-        GoogleNewsViewController.instantiateViewController(title: "イベント", rssUrl: "https://s3-ap-northeast-1.amazonaws.com/depart-rss/EventChecker.json"),
-        GoogleNewsViewController.instantiateViewController(title: "食品", rssUrl: "https://s3-ap-northeast-1.amazonaws.com/depart-rss/Foods.json"),
-        GoogleNewsViewController.instantiateViewController(title: "流通", rssUrl: "https://s3-ap-northeast-1.amazonaws.com/depart-rss/Ryutsuu.json"),
-        GoogleNewsViewController.instantiateViewController(title: "化粧品", rssUrl: "https://s3-ap-northeast-1.amazonaws.com/depart-rss/Cosmetics.json"),
-        GoogleNewsViewController.instantiateViewController(title: "インテリア", rssUrl: "https://s3-ap-northeast-1.amazonaws.com/depart-rss/Interior.json"),
-        GoogleNewsViewController.instantiateViewController(title: "お気に入り", rssUrl: "", isFavorite: true)
-    ])
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder:aDecoder)
+        let userDefaults = UserDefaults.standard
+        let subscribeRss: [Int]? = userDefaults.array(forKey: SelectRssTableViewController.SUBSCRIBE_RSS) as? [Int]
+        var viewcontrollers: [GoogleNewsViewController] = []
+        if let subscribeRss = subscribeRss {
+            for rss in subscribeRss {
+                if let r: Rss = Rss(rawValue: rss) {
+                    viewcontrollers.append(r.viewcontroller())
+                }
+            }
+        }
+        
+        pagingViewController = CustomPagingViewController(viewControllers: viewcontrollers)
+    }
+    
+    var pagingViewController:FixedPagingViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         pagingViewController.borderOptions = .hidden
         pagingViewController.menuBackgroundColor = .clear
