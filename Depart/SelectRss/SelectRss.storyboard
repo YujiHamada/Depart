@@ -268,14 +268,15 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="ScSwitch" destination="wSQ-Gt-3uV" id="29g-wy-cgQ"/>
-                        <outlet property="apparel" destination="1FC-v2-P9F" id="1iw-qj-tmZ"/>
+                        <outlet property="apparelSwitch" destination="1FC-v2-P9F" id="1iw-qj-tmZ"/>
                         <outlet property="cosmeticSwitch" destination="2AU-Ke-TWd" id="aK3-i2-6XP"/>
                         <outlet property="eventcheckerSwitch" destination="41j-uo-9UZ" id="PJa-Kt-6QQ"/>
                         <outlet property="foodSwitch" destination="cZ6-Be-L8d" id="BdE-pO-Ehm"/>
                         <outlet property="googleNewsSwitch" destination="E1r-W2-2UD" id="pBG-qN-ipb"/>
                         <outlet property="interiorSwitch" destination="nEs-Ap-uya" id="X8W-nl-HF1"/>
                         <outlet property="ryutsuSwitch" destination="pKf-Cv-Ww1" id="ELJ-CR-ZnS"/>
+                        <outlet property="scSwitch" destination="wSQ-Gt-3uV" id="29g-wy-cgQ"/>
+                        <outlet property="submitButton" destination="XdC-nm-hch" id="3TS-JU-w3K"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HK8-X0-y2o" userLabel="First Responder" sceneMemberID="firstResponder"/>

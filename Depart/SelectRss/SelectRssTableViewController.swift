@@ -11,14 +11,15 @@ import UIKit
 class SelectRssTableViewController: UITableViewController {
 
     @IBOutlet weak var googleNewsSwitch: UISwitch!
-    @IBOutlet weak var ScSwitch: UISwitch!
-    @IBOutlet weak var apparel: UISwitch!
+    @IBOutlet weak var scSwitch: UISwitch!
+    @IBOutlet weak var apparelSwitch: UISwitch!
     @IBOutlet weak var eventcheckerSwitch: UISwitch!
     @IBOutlet weak var foodSwitch: UISwitch!
     @IBOutlet weak var ryutsuSwitch: UISwitch!
     @IBOutlet weak var cosmeticSwitch: UISwitch!
     @IBOutlet weak var interiorSwitch: UISwitch!
     
+    @IBOutlet weak var submitButton: UIButton!
     static let SUBSCRIBE_RSS = "subscribeRss"
     
     static func getInstance() -> SelectRssTableViewController {
@@ -28,16 +29,88 @@ class SelectRssTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setSwitch()
+        
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: "決定", style: UIBarButtonItem.Style.plain, target: self, action: #selector(back))
+        self.navigationItem.leftBarButtonItem = newBackButton
     }
+    
+    private func setSwitch(){
+        let userDefaults = UserDefaults.standard
+        let subscribeRss: [Int]? = userDefaults.array(forKey: SelectRssTableViewController.SUBSCRIBE_RSS) as? [Int]
+        if let subscribeRss = subscribeRss {
+            submitButton.removeFromSuperview()
+            
+            if !subscribeRss.contains(Rss.depart.rawValue) {
+                googleNewsSwitch.isOn = false
+            }
+            
+            if !subscribeRss.contains(Rss.sc.rawValue) {
+                scSwitch.isOn = false
+            }
+            
+            if !subscribeRss.contains(Rss.apparel.rawValue) {
+                apparelSwitch.isOn = false
+            }
+            
+            if !subscribeRss.contains(Rss.eventchecker.rawValue) {
+                eventcheckerSwitch.isOn = false
+            }
+            
+            if !subscribeRss.contains(Rss.food.rawValue) {
+                foodSwitch.isOn = false
+            }
+            
+            if !subscribeRss.contains(Rss.ryutsu.rawValue) {
+                ryutsuSwitch.isOn = false
+            }
+            
+            if !subscribeRss.contains(Rss.depart.rawValue) {
+                googleNewsSwitch.isOn = false
+            }
+            
+            if !subscribeRss.contains(Rss.cosmetic.rawValue) {
+                cosmeticSwitch.isOn = false
+            }
+            
+            if !subscribeRss.contains(Rss.interior.rawValue) {
+                interiorSwitch.isOn = false
+            }
+        }
+    }
+    
     @IBAction func submit(_ sender: Any) {
+        let subscribeRss: [Int] = summaryRss()
+        
+        if (subscribeRss.count == 0) {
+            let alertController = UIAlertController(title: nil, message: "１つは選んでください！", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: { action in
+                
+            })
+            alertController.addAction(okAction)
+            alertController.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        } else {
+            let userDefaults = UserDefaults.standard
+            userDefaults.set(subscribeRss, forKey: "subscribeRss")
+            
+            let storyboard = UIStoryboard(name: "Tabbar", bundle: nil)
+            let viewController: TabBarViewController = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+            present(viewController, animated: true)
+        }
+        
+    }
+    
+    private func summaryRss() -> [Int]{
         var subscribeRss: [Int] = []
         if googleNewsSwitch.isOn {
             subscribeRss.append(Rss.depart.rawValue)
         }
-        if ScSwitch.isOn {
+        if scSwitch.isOn {
             subscribeRss.append(Rss.sc.rawValue)
         }
-        if apparel.isOn {
+        if apparelSwitch.isOn {
             subscribeRss.append(Rss.apparel.rawValue)
         }
         if eventcheckerSwitch.isOn {
@@ -55,24 +128,14 @@ class SelectRssTableViewController: UITableViewController {
         if interiorSwitch.isOn {
             subscribeRss.append(Rss.interior.rawValue)
         }
-        
-        if (subscribeRss.count == 0) {
-            let alertController = UIAlertController(title: nil, message: "１つは選んでください！", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: { action in
-                
-            })
-            alertController.addAction(okAction)
-            alertController.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
-            present(alertController, animated: true, completion: nil)
-        } else {
-            let userDefaults = UserDefaults.standard
-
-            userDefaults.set(subscribeRss, forKey: "subscribeRss")
-            
-            let storyboard = UIStoryboard(name: "Tabbar", bundle: nil)
-            let viewController: TabBarViewController = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
-            present(viewController, animated: true)        }
-        
+        return subscribeRss
+    }
+    
+    @objc func back(sender: UIBarButtonItem) {
+        let subscribeRss: [Int] = summaryRss()
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(subscribeRss, forKey: "subscribeRss")
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Table view data source

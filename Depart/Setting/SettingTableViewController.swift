@@ -19,6 +19,12 @@ class SettingTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            self.navigationController?.pushViewController(SelectRssTableViewController.getInstance(), animated: true)
+        }
+    }
 
     // MARK: - Table view data source
 
