@@ -29,9 +29,9 @@ enum Rss:Int {
         case .eventchecker:
             return GoogleNewsViewController.instantiateViewController(title: "イベント", rssUrl: "https://s3-ap-northeast-1.amazonaws.com/depart-rss/EventChecker.json")
         case .food:
-            return GoogleNewsViewController.instantiateViewController(title: "イベント", rssUrl: "https://s3-ap-northeast-1.amazonaws.com/depart-rss/EventChecker.json")
+            return GoogleNewsViewController.instantiateViewController(title: "食品", rssUrl: "https://s3-ap-northeast-1.amazonaws.com/depart-rss/Foods.json")
         case.ryutsu:
-            return GoogleNewsViewController.instantiateViewController(title: "イベント", rssUrl: "https://s3-ap-northeast-1.amazonaws.com/depart-rss/EventChecker.json")
+            return GoogleNewsViewController.instantiateViewController(title: "流通", rssUrl: "https://s3-ap-northeast-1.amazonaws.com/depart-rss/Ryutsuu.json")
         case.cosmetic:
             return GoogleNewsViewController.instantiateViewController(title: "化粧品", rssUrl: "https://s3-ap-northeast-1.amazonaws.com/depart-rss/Cosmetics.json")
         case .interior:

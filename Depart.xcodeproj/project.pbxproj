@@ -57,7 +57,7 @@
 		CA790E9E22ACE376009D367E /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA790E9D22ACE376009D367E /* SettingTableViewController.swift */; };
 		CA790EA022ACE5A9009D367E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA790E9F22ACE5A9009D367E /* TabBarViewController.swift */; };
 		CA8B831421ECAF77001A6820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B831321ECAF77001A6820 /* AppDelegate.swift */; };
-		CA8B831621ECAF77001A6820 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B831521ECAF77001A6820 /* ViewController.swift */; };
+		CA8B831621ECAF77001A6820 /* PagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B831521ECAF77001A6820 /* PagingViewController.swift */; };
 		CA8B831921ECAF77001A6820 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8B831721ECAF77001A6820 /* Main.storyboard */; };
 		CA8B831C21ECAF77001A6820 /* Depart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA8B831A21ECAF77001A6820 /* Depart.xcdatamodeld */; };
 		CA8B831E21ECAF7C001A6820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA8B831D21ECAF7C001A6820 /* Assets.xcassets */; };
@@ -123,7 +123,7 @@
 		CA790E9F22ACE5A9009D367E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		CA8B831021ECAF77001A6820 /* Depart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Depart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8B831321ECAF77001A6820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CA8B831521ECAF77001A6820 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA8B831521ECAF77001A6820 /* PagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingViewController.swift; sourceTree = "<group>"; };
 		CA8B831821ECAF77001A6820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA8B831B21ECAF77001A6820 /* Depart.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Depart.xcdatamodel; sourceTree = "<group>"; };
 		CA8B831D21ECAF7C001A6820 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				CA8B831321ECAF77001A6820 /* AppDelegate.swift */,
-				CA8B831521ECAF77001A6820 /* ViewController.swift */,
+				CA8B831521ECAF77001A6820 /* PagingViewController.swift */,
 				CA8B831721ECAF77001A6820 /* Main.storyboard */,
 				CA790E9822ACE125009D367E /* Tabbar.storyboard */,
 				CA790E9F22ACE5A9009D367E /* TabBarViewController.swift */,
@@ -477,7 +477,7 @@
 				CA182D9921EF7C8A00C93EDE /* UIView+constraints.swift in Sources */,
 				CAAD896821ECB2820056A11B /* BlogosViewController.swift in Sources */,
 				CA182DC421FD495C00C93EDE /* GoogleNewsWithoutImageTableViewCell.swift in Sources */,
-				CA8B831621ECAF77001A6820 /* ViewController.swift in Sources */,
+				CA8B831621ECAF77001A6820 /* PagingViewController.swift in Sources */,
 				CA8B831C21ECAF77001A6820 /* Depart.xcdatamodeld in Sources */,
 				CAAD896421ECB2630056A11B /* GoogleNewsViewController.swift in Sources */,
 				CA04071321FF596900623A8F /* WebViewController.swift in Sources */,

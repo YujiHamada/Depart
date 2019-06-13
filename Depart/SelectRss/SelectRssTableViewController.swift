@@ -135,6 +135,9 @@ class SelectRssTableViewController: UITableViewController {
         let subscribeRss: [Int] = summaryRss()
         let userDefaults = UserDefaults.standard
         userDefaults.set(subscribeRss, forKey: "subscribeRss")
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.needReloadPager = true
         self.navigationController?.popViewController(animated: true)
     }
     

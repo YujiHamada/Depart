@@ -29,7 +29,7 @@ class CustomPagingViewController: FixedPagingViewController {
     }
 }
 
-class ViewController: UIViewController {
+class PagingViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)
@@ -49,26 +49,44 @@ class ViewController: UIViewController {
     
     var pagingViewController:FixedPagingViewController!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if appDelegate.needReloadPager {
+            makePaging()
+            appDelegate.needReloadPager = false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        makePaging()
+    }
+    
+    private func makePaging() {
+        let userDefaults = UserDefaults.standard
+        let subscribeRss: [Int]? = userDefaults.array(forKey: SelectRssTableViewController.SUBSCRIBE_RSS) as? [Int]
+        var viewcontrollers: [GoogleNewsViewController] = []
+        if let subscribeRss = subscribeRss {
+            for rss in subscribeRss {
+                if let r: Rss = Rss(rawValue: rss) {
+                    viewcontrollers.append(r.viewcontroller())
+                }
+            }
+        }
         
-        
+        pagingViewController = CustomPagingViewController(viewControllers: viewcontrollers)
         pagingViewController.borderOptions = .hidden
         pagingViewController.menuBackgroundColor = .clear
         pagingViewController.indicatorColor = UIColor(white: 0, alpha: 0.4)
         pagingViewController.textColor = UIColor(white: 1, alpha: 0.6)
         pagingViewController.selectedTextColor = .white
         
-        // Make sure you add the PagingViewController as a child view
-        // controller and contrain it to the edges of the view.
         addChild(pagingViewController)
         view.addSubview(pagingViewController.view)
         view.constrainToEdges(pagingViewController.view)
         pagingViewController.didMove(toParent: self)
         
-        // Set the menu view as the title view on the navigation bar. This
-        // will remove the menu view from the view hierachy and put it
-        // into the navigation bar.
         navigationItem.titleView = pagingViewController.collectionView
     }
     
