@@ -9,15 +9,17 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController, WKNavigationDelegate {
 
     @IBOutlet weak var webView: WKWebView!
     var url: String!
     @IBOutlet weak var bottomToolbar: UIToolbar!
+    var screenshotButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        webView.navigationDelegate = self
         let request = URLRequest(url: URL(string: url)!)
         webView.load(request)
         
@@ -27,9 +29,8 @@ class WebViewController: UIViewController {
         let closeButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.stop, target: self, action: #selector(self.close))
         closeButton.imageInsets = UIEdgeInsets(top: 4.0, left: 0.0, bottom: 0, right: 0)
         
-//        let screenshotButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.stop, target: self, action: #selector(self.screenshot))
-        let screenshotButton = UIBarButtonItem(title: "記事をスクショする！", style: .plain, target: self, action: #selector(screenshot))
-        
+        screenshotButton = UIBarButtonItem(title: "記事をスクショする！", style: .plain, target: self, action: #selector(screenshot))
+        screenshotButton.isEnabled = false
 
         closeButton.imageInsets = UIEdgeInsets(top: 4.0, left: 0.0, bottom: 0, right: 0)
         
@@ -41,11 +42,17 @@ class WebViewController: UIViewController {
 
     }
     
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        screenshotButton.isEnabled = true
+    }
+    
     @IBAction func screenshot() {
         let webViewFrame = webView.frame
-        
         webView.frame = CGRect(x: webViewFrame.origin.x, y: webViewFrame.origin.y, width: webView.scrollView.contentSize.width, height: webView.scrollView.contentSize.height)
-        
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(s), userInfo: nil, repeats: false)
+    }
+    
+    @objc func s() {
         UIGraphicsBeginImageContextWithOptions(webView.scrollView.contentSize, false, 0);
         self.webView.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image:UIImage = UIGraphicsGetImageFromCurrentImageContext()!;
