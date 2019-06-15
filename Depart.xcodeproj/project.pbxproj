@@ -238,6 +238,15 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
+		CA790EA122B4A6B8009D367E /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				CA04071221FF596900623A8F /* WebViewController.swift */,
+				CA04071421FF598000623A8F /* WebView.storyboard */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		CA8B830721ECAF77001A6820 = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +268,7 @@
 		CA8B831221ECAF77001A6820 /* Depart */ = {
 			isa = PBXGroup;
 			children = (
+				CA790EA122B4A6B8009D367E /* WebView */,
 				CA790E9A22ACE351009D367E /* Setting */,
 				CA790E9722ACE0DE009D367E /* Main */,
 				CA790E9422ABEBEB009D367E /* Enum */,
@@ -272,8 +282,6 @@
 				CA8B831A21ECAF77001A6820 /* Depart.xcdatamodeld */,
 				CAAD896521ECB2730056A11B /* Blogos.storyboard */,
 				CAAD896721ECB2820056A11B /* BlogosViewController.swift */,
-				CA04071221FF596900623A8F /* WebViewController.swift */,
-				CA04071421FF598000623A8F /* WebView.storyboard */,
 				CA1CF7BC2261790B00DEB53E /* GoogleService-Info.plist */,
 				CA52219222115DE9006C240C /* Depart.entitlements */,
 			);
