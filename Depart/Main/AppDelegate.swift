@@ -30,15 +30,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         Messaging.messaging().delegate = self
 
-        InstanceID.instanceID().instanceID { (result, error) in
-        }
-        
-        Messaging.messaging().subscribe(toTopic: "all") { error in
+        let userDefaults = UserDefaults.standard
+        var subscribeTopics = userDefaults.array(forKey: "subscribeTopics")
+        if  subscribeTopics == nil {
+            Messaging.messaging().subscribe(toTopic: "all")
+            Messaging.messaging().subscribe(toTopic: "morning")
+            Messaging.messaging().subscribe(toTopic: "evening")
+            subscribeTopics = ["all", "morning", "evening"]
+            userDefaults.set(subscribeTopics, forKey: "subscribeTopics")
         }
         
         UIApplication.shared.applicationIconBadgeNumber = 0
         
-        let userDefaults = UserDefaults.standard
+        
         let subscribeRss = userDefaults.array(forKey: SelectRssTableViewController.SUBSCRIBE_RSS)
         if subscribeRss == nil {
             self.window?.rootViewController = SelectRssTableViewController.getInstance()
