@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import RealmSwift
 
 class WebViewController: UIViewController, WKNavigationDelegate {
 
@@ -15,6 +16,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     var url: String!
     @IBOutlet weak var bottomToolbar: UIToolbar!
     var screenshotButton: UIBarButtonItem!
+    var googleNews: GoogleNews?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +31,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         let closeButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.stop, target: self, action: #selector(self.close))
         closeButton.imageInsets = UIEdgeInsets(top: 4.0, left: 0.0, bottom: 0, right: 0)
         
-        screenshotButton = UIBarButtonItem(title: "記事をスクショする！", style: .plain, target: self, action: #selector(screenshot))
+        screenshotButton = UIBarButtonItem(title: "記事をスクショする！", style: .plain, target: self, action: #selector(screenshotButtonTapped))
         screenshotButton.isEnabled = false
 
         closeButton.imageInsets = UIEdgeInsets(top: 4.0, left: 0.0, bottom: 0, right: 0)
@@ -46,17 +48,44 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         screenshotButton.isEnabled = true
     }
     
-    @IBAction func screenshot() {
+    @IBAction func screenshotButtonTapped() {
         let webViewFrame = webView.frame
         webView.frame = CGRect(x: webViewFrame.origin.x, y: webViewFrame.origin.y, width: webView.scrollView.contentSize.width, height: webView.scrollView.contentSize.height)
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(s), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(screenshot), userInfo: nil, repeats: false)
+        
     }
     
-    @objc func s() {
+    @objc func screenshot() {
         UIGraphicsBeginImageContextWithOptions(webView.scrollView.contentSize, false, 0);
         self.webView.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image:UIImage = UIGraphicsGetImageFromCurrentImageContext()!;
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        
+        if let googleNews = googleNews {
+            let path = self.fileInDocumentsDirectory(filename: googleNews.guid) + ".png"
+            let pngImageData = image.pngData()
+            do {
+                try pngImageData!.write(to: URL(fileURLWithPath: path), options: .atomic)
+                
+                let screenshot = Screenshot.create(googleNews: googleNews, fileName: googleNews.guid)
+                let realm = try! Realm()
+                try! realm.write {
+                    realm.add(screenshot)
+                }
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    func getDocumentsURL() -> NSURL {
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as NSURL
+        return documentsURL
+    }
+    
+    func fileInDocumentsDirectory(filename: String) -> String {
+        let fileURL = getDocumentsURL().appendingPathComponent(filename)
+        return fileURL!.path
     }
     
     @objc func close() {

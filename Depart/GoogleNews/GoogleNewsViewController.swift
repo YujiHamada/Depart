@@ -90,6 +90,7 @@ class GoogleNewsViewController: UIViewController, UITableViewDataSource, UITable
         let viewController: WebViewController = storyboard.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
         let googleNews = gooleNewsList[indexPath.row]
         viewController.url = googleNews.url
+        viewController.googleNews = googleNews
         present(viewController, animated: true, completion: nil)
     }
 }

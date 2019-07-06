@@ -12,7 +12,6 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="hAY-Jo-jTn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g8h-Jg-mhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="TabBarViewController" id="0bu-yj-NxT" customClass="TabBarViewController" customModule="Depart" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pmn-NR-j2i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -22,8 +21,10 @@
                     <connections>
                         <segue destination="9Nc-ST-7jc" kind="relationship" relationship="viewControllers" id="A7j-Xp-eqL"/>
                         <segue destination="fEF-rk-WvL" kind="relationship" relationship="viewControllers" id="Od7-xN-coc"/>
+                        <segue destination="MhE-fg-pIb" kind="relationship" relationship="viewControllers" id="AXP-9B-a24"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8h-Jg-mhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-451" y="-214"/>
         </scene>
@@ -46,6 +47,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rw-Cn-fVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="243" y="-216"/>
+        </scene>
+        <!--ScreenshotTable-->
+        <scene sceneID="n09-bU-Tdb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ScreenshotTable" id="MhE-fg-pIb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="izH-kX-AHg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDv-ML-NEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="-102"/>
         </scene>
     </scenes>
 </document>

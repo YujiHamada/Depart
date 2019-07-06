@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UWP-S8-2oS">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Screenshot Table View Controller-->
+        <scene sceneID="sjY-iu-3it">
+            <objects>
+                <tableViewController id="Qvb-Rk-OvH" customClass="ScreenshotTableViewController" customModule="Depart" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wAn-XZ-xLY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ScreenshotTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScreenshotTableViewCell" id="MaQ-In-yyW" customClass="ScreenshotTableViewCell" customModule="Depart" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MaQ-In-yyW" id="Wh0-Jb-GI2">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ges-Q9-oOo">
+                                            <rect key="frame" x="20" y="15" width="268" height="13.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019/01/01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNW-ZP-rQF">
+                                            <rect key="frame" x="304" y="11.5" width="90" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="xCx-32-njK"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ges-Q9-oOo" firstAttribute="top" secondItem="Wh0-Jb-GI2" secondAttribute="top" constant="15" id="0KL-DL-mL7"/>
+                                        <constraint firstItem="GNW-ZP-rQF" firstAttribute="centerY" secondItem="Wh0-Jb-GI2" secondAttribute="centerY" id="DXT-eP-nNO"/>
+                                        <constraint firstItem="ges-Q9-oOo" firstAttribute="centerY" secondItem="Wh0-Jb-GI2" secondAttribute="centerY" id="Qcc-tc-gs8"/>
+                                        <constraint firstAttribute="bottom" secondItem="ges-Q9-oOo" secondAttribute="bottom" constant="15" id="TkS-fU-YBb"/>
+                                        <constraint firstItem="ges-Q9-oOo" firstAttribute="leading" secondItem="Wh0-Jb-GI2" secondAttribute="leading" constant="20" id="VwB-AY-eb4"/>
+                                        <constraint firstItem="GNW-ZP-rQF" firstAttribute="leading" secondItem="ges-Q9-oOo" secondAttribute="trailing" constant="16" id="kbu-6Y-H71"/>
+                                        <constraint firstAttribute="trailing" secondItem="GNW-ZP-rQF" secondAttribute="trailing" constant="20" id="sok-Ed-390"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="GNW-ZP-rQF" id="Ek8-26-5vJ"/>
+                                    <outlet property="titleLabel" destination="ges-Q9-oOo" id="Ocj-gB-O87"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Qvb-Rk-OvH" id="l0E-4G-THZ"/>
+                            <outlet property="delegate" destination="Qvb-Rk-OvH" id="qfS-XA-2w5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="P8W-zr-fXS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NN3-87-LPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934.78260869565224" y="114.50892857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gLR-oT-arq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UWP-S8-2oS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XHh-04-S2o">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qvb-Rk-OvH" kind="relationship" relationship="rootViewController" id="Jfs-c5-962"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ssm-Wb-SXR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.637681159420293" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+</document>

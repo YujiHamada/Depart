@@ -8,36 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BDAB177C39615D5C64F8B0BE /* Pods_Depart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76053300EB0C24AD8F6B91F4 /* Pods_Depart.framework */; };
-		CA02B382229ECCAC00852E3C /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B364229ECCA900852E3C /* Icon-120.png */; };
-		CA02B383229ECCAC00852E3C /* Icon-256.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B365229ECCA900852E3C /* Icon-256.png */; };
-		CA02B384229ECCAC00852E3C /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B366229ECCA900852E3C /* Icon-100.png */; };
-		CA02B385229ECCAC00852E3C /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B367229ECCA900852E3C /* Icon-144.png */; };
-		CA02B386229ECCAC00852E3C /* Icon-180.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B368229ECCA900852E3C /* Icon-180.png */; };
-		CA02B387229ECCAC00852E3C /* Icon-48.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B369229ECCA900852E3C /* Icon-48.png */; };
-		CA02B388229ECCAC00852E3C /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B36A229ECCA900852E3C /* Icon-72.png */; };
-		CA02B389229ECCAC00852E3C /* Icon-20.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B36B229ECCA900852E3C /* Icon-20.png */; };
-		CA02B38A229ECCAC00852E3C /* Icon-64.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B36C229ECCAA00852E3C /* Icon-64.png */; };
-		CA02B38B229ECCAC00852E3C /* Icon-87.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B36D229ECCAA00852E3C /* Icon-87.png */; };
-		CA02B38C229ECCAC00852E3C /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B36E229ECCAA00852E3C /* Icon-57.png */; };
-		CA02B38D229ECCAC00852E3C /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B36F229ECCAA00852E3C /* Icon-76.png */; };
-		CA02B38E229ECCAC00852E3C /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B370229ECCAA00852E3C /* Icon-80.png */; };
-		CA02B38F229ECCAC00852E3C /* Icon-172.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B371229ECCAA00852E3C /* Icon-172.png */; };
-		CA02B390229ECCAC00852E3C /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B372229ECCAA00852E3C /* Icon-114.png */; };
-		CA02B391229ECCAC00852E3C /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B373229ECCAA00852E3C /* Icon-29.png */; };
-		CA02B392229ECCAC00852E3C /* Icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B374229ECCAA00852E3C /* Icon-1024.png */; };
-		CA02B393229ECCAC00852E3C /* Icon-167.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B375229ECCAB00852E3C /* Icon-167.png */; };
-		CA02B394229ECCAC00852E3C /* Icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B376229ECCAB00852E3C /* Icon-512.png */; };
-		CA02B395229ECCAC00852E3C /* Icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B377229ECCAB00852E3C /* Icon-152.png */; };
-		CA02B396229ECCAC00852E3C /* Icon-55.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B378229ECCAB00852E3C /* Icon-55.png */; };
-		CA02B397229ECCAC00852E3C /* Icon-196.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B379229ECCAB00852E3C /* Icon-196.png */; };
-		CA02B398229ECCAC00852E3C /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B37A229ECCAB00852E3C /* Icon-60.png */; };
-		CA02B399229ECCAC00852E3C /* Icon-88.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B37B229ECCAB00852E3C /* Icon-88.png */; };
-		CA02B39A229ECCAC00852E3C /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B37C229ECCAC00852E3C /* Icon-40.png */; };
-		CA02B39B229ECCAC00852E3C /* Icon-16.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B37D229ECCAC00852E3C /* Icon-16.png */; };
-		CA02B39C229ECCAC00852E3C /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B37E229ECCAC00852E3C /* Icon-50.png */; };
-		CA02B39D229ECCAC00852E3C /* Icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B37F229ECCAC00852E3C /* Icon-128.png */; };
-		CA02B39E229ECCAC00852E3C /* Icon-58.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B380229ECCAC00852E3C /* Icon-58.png */; };
-		CA02B39F229ECCAC00852E3C /* Icon-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CA02B381229ECCAC00852E3C /* Icon-32.png */; };
 		CA04070E21FD718400623A8F /* GoogleNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04070C21FD718400623A8F /* GoogleNewsTableViewCell.swift */; };
 		CA04070F21FD718400623A8F /* GoogleNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA04070D21FD718400623A8F /* GoogleNewsTableViewCell.xib */; };
 		CA04071121FD729E00623A8F /* BaseGoogleNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04071021FD729E00623A8F /* BaseGoogleNewsTableViewCell.swift */; };
@@ -48,6 +18,12 @@
 		CA182DC421FD495C00C93EDE /* GoogleNewsWithoutImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA182DC221FD495C00C93EDE /* GoogleNewsWithoutImageTableViewCell.swift */; };
 		CA182DC521FD495C00C93EDE /* GoogleNewsWithoutImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA182DC321FD495C00C93EDE /* GoogleNewsWithoutImageTableViewCell.xib */; };
 		CA1CF7BD2261790B00DEB53E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA1CF7BC2261790B00DEB53E /* GoogleService-Info.plist */; };
+		CA3B088922D03426003F8316 /* Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3B088822D03426003F8316 /* Screenshot.swift */; };
+		CA473EE422D06033003E607E /* ScreenshotTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA473EE322D06033003E607E /* ScreenshotTable.storyboard */; };
+		CA473EE622D06096003E607E /* ScreenshotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA473EE522D06096003E607E /* ScreenshotTableViewController.swift */; };
+		CA473EE822D060C2003E607E /* ScreenshotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA473EE722D060C2003E607E /* ScreenshotTableViewCell.swift */; };
+		CA473EEA22D078BF003E607E /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA473EE922D078BF003E607E /* ImageViewController.swift */; };
+		CA473EEC22D07A4F003E607E /* ImageView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA473EEB22D07A4F003E607E /* ImageView.storyboard */; };
 		CA6756F02259CC6A001F1F86 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6756EF2259CC69001F1F86 /* WebKit.framework */; };
 		CA790E9122AB6F0A009D367E /* SelectRss.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA790E9022AB6F0A009D367E /* SelectRss.storyboard */; };
 		CA790E9322AB7369009D367E /* SelectRssTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA790E9222AB7369009D367E /* SelectRssTableViewController.swift */; };
@@ -112,6 +88,12 @@
 		CA182DC221FD495C00C93EDE /* GoogleNewsWithoutImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleNewsWithoutImageTableViewCell.swift; sourceTree = "<group>"; };
 		CA182DC321FD495C00C93EDE /* GoogleNewsWithoutImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoogleNewsWithoutImageTableViewCell.xib; sourceTree = "<group>"; };
 		CA1CF7BC2261790B00DEB53E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA3B088822D03426003F8316 /* Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screenshot.swift; sourceTree = "<group>"; };
+		CA473EE322D06033003E607E /* ScreenshotTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScreenshotTable.storyboard; sourceTree = "<group>"; };
+		CA473EE522D06096003E607E /* ScreenshotTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotTableViewController.swift; sourceTree = "<group>"; };
+		CA473EE722D060C2003E607E /* ScreenshotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotTableViewCell.swift; sourceTree = "<group>"; };
+		CA473EE922D078BF003E607E /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		CA473EEB22D07A4F003E607E /* ImageView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageView.storyboard; sourceTree = "<group>"; };
 		CA52219222115DE9006C240C /* Depart.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Depart.entitlements; sourceTree = "<group>"; };
 		CA6756EF2259CC69001F1F86 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CA790E9022AB6F0A009D367E /* SelectRss.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectRss.storyboard; sourceTree = "<group>"; };
@@ -209,6 +191,18 @@
 			path = GoogleNews;
 			sourceTree = "<group>";
 		};
+		CA3B088B22D04273003F8316 /* Screenshot */ = {
+			isa = PBXGroup;
+			children = (
+				CA473EE322D06033003E607E /* ScreenshotTable.storyboard */,
+				CA473EE522D06096003E607E /* ScreenshotTableViewController.swift */,
+				CA473EE722D060C2003E607E /* ScreenshotTableViewCell.swift */,
+				CA473EE922D078BF003E607E /* ImageViewController.swift */,
+				CA473EEB22D07A4F003E607E /* ImageView.storyboard */,
+			);
+			path = Screenshot;
+			sourceTree = "<group>";
+		};
 		CA790E9422ABEBEB009D367E /* Enum */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +262,7 @@
 		CA8B831221ECAF77001A6820 /* Depart */ = {
 			isa = PBXGroup;
 			children = (
+				CA3B088B22D04273003F8316 /* Screenshot */,
 				CA790EA122B4A6B8009D367E /* WebView */,
 				CA790E9A22ACE351009D367E /* Setting */,
 				CA790E9722ACE0DE009D367E /* Main */,
@@ -284,6 +279,7 @@
 				CAAD896721ECB2820056A11B /* BlogosViewController.swift */,
 				CA1CF7BC2261790B00DEB53E /* GoogleService-Info.plist */,
 				CA52219222115DE9006C240C /* Depart.entitlements */,
+				CA3B088822D03426003F8316 /* Screenshot.swift */,
 			);
 			path = Depart;
 			sourceTree = "<group>";
@@ -372,47 +368,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA02B38C229ECCAC00852E3C /* Icon-57.png in Resources */,
 				CA8B832121ECAF7C001A6820 /* LaunchScreen.storyboard in Resources */,
-				CA02B39D229ECCAC00852E3C /* Icon-128.png in Resources */,
 				CA790E9122AB6F0A009D367E /* SelectRss.storyboard in Resources */,
-				CA02B396229ECCAC00852E3C /* Icon-55.png in Resources */,
 				CA8B831E21ECAF7C001A6820 /* Assets.xcassets in Resources */,
-				CA02B39B229ECCAC00852E3C /* Icon-16.png in Resources */,
-				CA02B38F229ECCAC00852E3C /* Icon-172.png in Resources */,
-				CA02B391229ECCAC00852E3C /* Icon-29.png in Resources */,
-				CA02B38A229ECCAC00852E3C /* Icon-64.png in Resources */,
 				CA1CF7BD2261790B00DEB53E /* GoogleService-Info.plist in Resources */,
-				CA02B389229ECCAC00852E3C /* Icon-20.png in Resources */,
-				CA02B39F229ECCAC00852E3C /* Icon-32.png in Resources */,
 				CA04071521FF598000623A8F /* WebView.storyboard in Resources */,
-				CA02B392229ECCAC00852E3C /* Icon-1024.png in Resources */,
+				CA473EEC22D07A4F003E607E /* ImageView.storyboard in Resources */,
 				CAAD896221ECB2460056A11B /* GoogleNews.storyboard in Resources */,
 				CA790E9922ACE125009D367E /* Tabbar.storyboard in Resources */,
 				CAAD896621ECB2730056A11B /* Blogos.storyboard in Resources */,
-				CA02B386229ECCAC00852E3C /* Icon-180.png in Resources */,
-				CA02B38E229ECCAC00852E3C /* Icon-80.png in Resources */,
-				CA02B39E229ECCAC00852E3C /* Icon-58.png in Resources */,
-				CA02B395229ECCAC00852E3C /* Icon-152.png in Resources */,
-				CA02B38B229ECCAC00852E3C /* Icon-87.png in Resources */,
 				CA790E9C22ACE369009D367E /* Setting.storyboard in Resources */,
-				CA02B385229ECCAC00852E3C /* Icon-144.png in Resources */,
-				CA02B39A229ECCAC00852E3C /* Icon-40.png in Resources */,
+				CA473EE422D06033003E607E /* ScreenshotTable.storyboard in Resources */,
 				CA04070F21FD718400623A8F /* GoogleNewsTableViewCell.xib in Resources */,
-				CA02B383229ECCAC00852E3C /* Icon-256.png in Resources */,
 				CA182DC521FD495C00C93EDE /* GoogleNewsWithoutImageTableViewCell.xib in Resources */,
-				CA02B387229ECCAC00852E3C /* Icon-48.png in Resources */,
-				CA02B382229ECCAC00852E3C /* Icon-120.png in Resources */,
-				CA02B390229ECCAC00852E3C /* Icon-114.png in Resources */,
-				CA02B38D229ECCAC00852E3C /* Icon-76.png in Resources */,
-				CA02B388229ECCAC00852E3C /* Icon-72.png in Resources */,
-				CA02B398229ECCAC00852E3C /* Icon-60.png in Resources */,
-				CA02B39C229ECCAC00852E3C /* Icon-50.png in Resources */,
-				CA02B384229ECCAC00852E3C /* Icon-100.png in Resources */,
-				CA02B394229ECCAC00852E3C /* Icon-512.png in Resources */,
-				CA02B399229ECCAC00852E3C /* Icon-88.png in Resources */,
-				CA02B393229ECCAC00852E3C /* Icon-167.png in Resources */,
-				CA02B397229ECCAC00852E3C /* Icon-196.png in Resources */,
 				CA8B831921ECAF77001A6820 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,12 +454,16 @@
 				CAAD896821ECB2820056A11B /* BlogosViewController.swift in Sources */,
 				CA182DC421FD495C00C93EDE /* GoogleNewsWithoutImageTableViewCell.swift in Sources */,
 				CA8B831621ECAF77001A6820 /* PagingViewController.swift in Sources */,
+				CA473EE622D06096003E607E /* ScreenshotTableViewController.swift in Sources */,
 				CA8B831C21ECAF77001A6820 /* Depart.xcdatamodeld in Sources */,
 				CAAD896421ECB2630056A11B /* GoogleNewsViewController.swift in Sources */,
+				CA3B088922D03426003F8316 /* Screenshot.swift in Sources */,
 				CA04071321FF596900623A8F /* WebViewController.swift in Sources */,
 				CA790E9322AB7369009D367E /* SelectRssTableViewController.swift in Sources */,
+				CA473EE822D060C2003E607E /* ScreenshotTableViewCell.swift in Sources */,
 				CA182D9E21F0D1D200C93EDE /* GoogleNews.swift in Sources */,
 				CA8B831421ECAF77001A6820 /* AppDelegate.swift in Sources */,
+				CA473EEA22D078BF003E607E /* ImageViewController.swift in Sources */,
 				CA790EA022ACE5A9009D367E /* TabBarViewController.swift in Sources */,
 				CA04070E21FD718400623A8F /* GoogleNewsTableViewCell.swift in Sources */,
 			);
