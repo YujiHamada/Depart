@@ -13,6 +13,7 @@ class SettingTableViewController: UITableViewController {
 
     @IBOutlet weak var morningSwitch: UISwitch!
     @IBOutlet weak var eveningSwitch: UISwitch!
+    @IBOutlet weak var versionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +25,22 @@ class SettingTableViewController: UITableViewController {
         if !subscribeTopics.contains("evening") {
             eveningSwitch.isOn = false
         }
+        
+        versionLabel.text = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             self.navigationController?.pushViewController(SelectRssTableViewController.getInstance(), animated: true)
+        } else if indexPath.section == 2 {
+            if indexPath.row == 0 {
+                let vc = SimpleWebViewController(url: "https://yujihamada.github.io/depart-privacy-policy/support.html")
+                self.navigationController?.pushViewController(vc, animated: true)
+            } else if indexPath.row == 1 {
+                let vc = SimpleWebViewController(url: "https://yujihamada.github.io/depart-privacy-policy/privacy_policy.html")
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            
         }
     }
 

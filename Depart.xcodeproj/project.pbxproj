@@ -24,6 +24,7 @@
 		CA473EE822D060C2003E607E /* ScreenshotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA473EE722D060C2003E607E /* ScreenshotTableViewCell.swift */; };
 		CA473EEA22D078BF003E607E /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA473EE922D078BF003E607E /* ImageViewController.swift */; };
 		CA473EEC22D07A4F003E607E /* ImageView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA473EEB22D07A4F003E607E /* ImageView.storyboard */; };
+		CA473EEE22D0E766003E607E /* SimpleWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA473EED22D0E766003E607E /* SimpleWebViewController.swift */; };
 		CA6756F02259CC6A001F1F86 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6756EF2259CC69001F1F86 /* WebKit.framework */; };
 		CA790E9122AB6F0A009D367E /* SelectRss.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA790E9022AB6F0A009D367E /* SelectRss.storyboard */; };
 		CA790E9322AB7369009D367E /* SelectRssTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA790E9222AB7369009D367E /* SelectRssTableViewController.swift */; };
@@ -94,6 +95,7 @@
 		CA473EE722D060C2003E607E /* ScreenshotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotTableViewCell.swift; sourceTree = "<group>"; };
 		CA473EE922D078BF003E607E /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		CA473EEB22D07A4F003E607E /* ImageView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageView.storyboard; sourceTree = "<group>"; };
+		CA473EED22D0E766003E607E /* SimpleWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWebViewController.swift; sourceTree = "<group>"; };
 		CA52219222115DE9006C240C /* Depart.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Depart.entitlements; sourceTree = "<group>"; };
 		CA6756EF2259CC69001F1F86 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CA790E9022AB6F0A009D367E /* SelectRss.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectRss.storyboard; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			children = (
 				CA790E9B22ACE369009D367E /* Setting.storyboard */,
 				CA790E9D22ACE376009D367E /* SettingTableViewController.swift */,
+				CA473EED22D0E766003E607E /* SimpleWebViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				CA473EEA22D078BF003E607E /* ImageViewController.swift in Sources */,
 				CA790EA022ACE5A9009D367E /* TabBarViewController.swift in Sources */,
 				CA04070E21FD718400623A8F /* GoogleNewsTableViewCell.swift in Sources */,
+				CA473EEE22D0E766003E607E /* SimpleWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

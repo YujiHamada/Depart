@@ -157,7 +157,20 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXQ-qP-WB4">
+                                                    <rect key="frame" x="344" y="22" width="50" height="0.0"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="KB5-nF-LcS"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aXQ-qP-WB4" firstAttribute="centerY" secondItem="MeJ-Qm-iog" secondAttribute="centerY" id="7dZ-6C-yVG"/>
+                                                <constraint firstAttribute="trailing" secondItem="aXQ-qP-WB4" secondAttribute="trailing" constant="20" id="iEK-wn-MCF"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <constraints>
                                             <constraint firstItem="cFm-dp-WsG" firstAttribute="centerY" secondItem="dgJ-vp-h1k" secondAttribute="centerY" id="DEs-D1-wme"/>
@@ -177,6 +190,7 @@
                     <connections>
                         <outlet property="eveningSwitch" destination="XmH-XH-sN0" id="sRX-ro-qy4"/>
                         <outlet property="morningSwitch" destination="6Yr-Ub-vaX" id="xQn-3z-mdW"/>
+                        <outlet property="versionLabel" destination="aXQ-qP-WB4" id="TPX-2a-Gur"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rv6-FW-qGj" userLabel="First Responder" sceneMemberID="firstResponder"/>
