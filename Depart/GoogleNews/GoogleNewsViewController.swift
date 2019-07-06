@@ -34,8 +34,15 @@ class GoogleNewsViewController: UIViewController, UITableViewDataSource, UITable
         self.table.register(UINib(nibName: "GoogleNewsWithoutImageTableViewCell", bundle: nil), forCellReuseIdentifier: "GoogleNewsWithoutImageTableViewCell")
         self.table.register(UINib(nibName: "GoogleNewsTableViewCell", bundle: nil), forCellReuseIdentifier: "GoogleNewsTableViewCell")
         request.delegate = self
-        if isFavorite {
-             gooleNewsList = GoogleNews.getAll()
+//        if isFavorite {
+//            gooleNewsList = GoogleNews.getAll()
+//            self.table.reloadData()
+//        } else {
+//            request.request()
+//        }
+        
+        if request.rssUrl == nil {
+            gooleNewsList = GoogleNews.getAll()
             self.table.reloadData()
         } else {
             request.request()
@@ -46,7 +53,7 @@ class GoogleNewsViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     @objc func refresh(sender: UIRefreshControl) {
-        if request.rssUrl == "" {
+        if request.rssUrl == nil {
             gooleNewsList = GoogleNews.getAll()
             self.table.reloadData()
             self.refreshControl.endRefreshing()

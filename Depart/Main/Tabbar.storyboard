@@ -20,6 +20,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="9Nc-ST-7jc" kind="relationship" relationship="viewControllers" id="A7j-Xp-eqL"/>
+                        <segue destination="VIu-cR-De0" kind="relationship" relationship="viewControllers" id="avH-da-cpv"/>
                         <segue destination="MhE-fg-pIb" kind="relationship" relationship="viewControllers" id="AXP-9B-a24"/>
                         <segue destination="fEF-rk-WvL" kind="relationship" relationship="viewControllers" id="Od7-xN-coc"/>
                     </connections>
@@ -48,6 +49,16 @@
             </objects>
             <point key="canvasLocation" x="206" y="-170"/>
         </scene>
+        <!--GoogleNews-->
+        <scene sceneID="P8B-jQ-8o7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GoogleNews" id="VIu-cR-De0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="お気に入り" image="FavoriteIcon" selectedImage="FavoriteIcon" id="zyn-47-0w2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1og-QU-fU7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="-72"/>
+        </scene>
         <!--ScreenshotTable-->
         <scene sceneID="n09-bU-Tdb">
             <objects>
@@ -61,6 +72,7 @@
     </scenes>
     <resources>
         <image name="CameraIcon" width="25" height="25"/>
+        <image name="FavoriteIcon" width="25" height="25"/>
         <image name="RssIcon" width="25" height="25"/>
         <image name="SettingIcon" width="25" height="25"/>
     </resources>
