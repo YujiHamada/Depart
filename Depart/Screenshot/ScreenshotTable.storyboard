@@ -68,11 +68,13 @@
             </objects>
             <point key="canvasLocation" x="934.78260869565224" y="114.50892857142857"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--スクショ-->
         <scene sceneID="gLR-oT-arq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UWP-S8-2oS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="スクショ" image="CameraIcon" selectedImage="CameraIcon" id="XzR-Cs-4SK"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XHh-04-S2o">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -87,4 +89,7 @@
             <point key="canvasLocation" x="24.637681159420293" y="114.50892857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CameraIcon" width="25" height="25"/>
+    </resources>
 </document>

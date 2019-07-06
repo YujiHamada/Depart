@@ -183,12 +183,13 @@
             </objects>
             <point key="canvasLocation" x="1002.8985507246377" y="103.79464285714285"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--設定-->
         <scene sceneID="9P2-Yf-z85">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pj8-Pt-Z5H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="hOP-kg-4a6"/>
+                    <tabBarItem key="tabBarItem" title="設定" image="SettingIcon" selectedImage="SettingIcon" id="6eZ-Qs-JRE"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OaD-yN-0NZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -203,4 +204,7 @@
             <point key="canvasLocation" x="92.753623188405811" y="103.79464285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SettingIcon" width="25" height="25"/>
+    </resources>
 </document>

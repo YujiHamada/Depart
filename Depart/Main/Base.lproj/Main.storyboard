@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Paging View Controller-->
+        <!--ニュース-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PagingViewController" customModule="Depart" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="Mjw-Ux-TgW"/>
+                    <tabBarItem key="tabBarItem" title="ニュース" image="RssIcon" selectedImage="RssIcon" id="Mjw-Ux-TgW"/>
                     <navigationItem key="navigationItem" id="9Qz-WP-EQV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -48,4 +48,7 @@
             <point key="canvasLocation" x="133.59999999999999" y="-587.85607196401804"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="RssIcon" width="25" height="25"/>
+    </resources>
 </document>

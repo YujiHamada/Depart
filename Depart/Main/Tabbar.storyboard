@@ -20,8 +20,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="9Nc-ST-7jc" kind="relationship" relationship="viewControllers" id="A7j-Xp-eqL"/>
-                        <segue destination="fEF-rk-WvL" kind="relationship" relationship="viewControllers" id="Od7-xN-coc"/>
                         <segue destination="MhE-fg-pIb" kind="relationship" relationship="viewControllers" id="AXP-9B-a24"/>
+                        <segue destination="fEF-rk-WvL" kind="relationship" relationship="viewControllers" id="Od7-xN-coc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8h-Jg-mhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -32,7 +32,7 @@
         <scene sceneID="gQr-N4-JYE">
             <objects>
                 <viewControllerPlaceholder storyboardName="Main" id="9Nc-ST-7jc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cbo-y3-ud2"/>
+                    <tabBarItem key="tabBarItem" title="ニュース" image="RssIcon" id="cbo-y3-ud2"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgg-Dc-cTT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,21 +42,26 @@
         <scene sceneID="o7D-il-66Y">
             <objects>
                 <viewControllerPlaceholder storyboardName="Setting" id="fEF-rk-WvL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="xUE-MV-zWo"/>
+                    <tabBarItem key="tabBarItem" title="設定" image="SettingIcon" selectedImage="SettingIcon" id="xUE-MV-zWo"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rw-Cn-fVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="243" y="-216"/>
+            <point key="canvasLocation" x="206" y="-170"/>
         </scene>
         <!--ScreenshotTable-->
         <scene sceneID="n09-bU-Tdb">
             <objects>
                 <viewControllerPlaceholder storyboardName="ScreenshotTable" id="MhE-fg-pIb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="izH-kX-AHg"/>
+                    <tabBarItem key="tabBarItem" title="スクショ" image="CameraIcon" selectedImage="CameraIcon" id="izH-kX-AHg"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDv-ML-NEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="216" y="-102"/>
+            <point key="canvasLocation" x="268" y="-292"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CameraIcon" width="25" height="25"/>
+        <image name="RssIcon" width="25" height="25"/>
+        <image name="SettingIcon" width="25" height="25"/>
+    </resources>
 </document>
