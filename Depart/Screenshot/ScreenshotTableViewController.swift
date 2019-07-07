@@ -23,6 +23,7 @@ class ScreenshotTableViewController: UITableViewController {
         super.viewDidLoad()
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        self.navigationItem.title = "スクリーンショット一覧"
     }
     
     @objc private func refresh() {

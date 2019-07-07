@@ -27,6 +27,7 @@ class SettingTableViewController: UITableViewController {
         }
         
         versionLabel.text = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+        self.navigationItem.title = "設定"
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
