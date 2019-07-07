@@ -21,7 +21,23 @@ class ScreenshotTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
+    }
+    
+    @objc private func refresh() {
+        tableView.reloadData()
+        tableView.refreshControl?.endRefreshing()
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let realm = try! Realm()
+            try! realm.write {
+                realm.delete(screenShots![indexPath.row])
+            }
+            tableView.reloadData()
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

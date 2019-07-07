@@ -65,7 +65,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         webView.frame = webViewFrame
         if let googleNews = googleNews {
-            let path = self.fileInDocumentsDirectory(filename: googleNews.guid) + ".png"
+            let path = self.fileInDocumentsDirectory(filename:  NSUUID().uuidString) + ".png"
             let pngImageData = image.pngData()
             do {
                 try pngImageData!.write(to: URL(fileURLWithPath: path), options: .atomic)
