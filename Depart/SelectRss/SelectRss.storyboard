@@ -17,8 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="p9X-dk-K2Q">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTp-bJ-Xcb">
+                                    <rect key="frame" x="8" y="1.6666666666666643" width="359" height="96.666666666666686"/>
+                                    <string key="text">購読するRSSを選ぼう！
+RSSはいつでも選択できます。</string>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="YTp-bJ-Xcb" firstAttribute="top" secondItem="p9X-dk-K2Q" secondAttribute="top" constant="1.6666666666666679" id="29U-Pk-sWV"/>
+                                <constraint firstAttribute="trailing" secondItem="YTp-bJ-Xcb" secondAttribute="trailing" constant="8" id="CyI-iz-FpT"/>
+                                <constraint firstItem="YTp-bJ-Xcb" firstAttribute="leading" secondItem="p9X-dk-K2Q" secondAttribute="leading" constant="8" id="V4F-s2-qYj"/>
+                                <constraint firstAttribute="bottom" secondItem="YTp-bJ-Xcb" secondAttribute="bottom" constant="1.6666666666666714" id="sbJ-mC-PJV"/>
+                                <constraint firstItem="YTp-bJ-Xcb" firstAttribute="centerY" secondItem="p9X-dk-K2Q" secondAttribute="centerY" id="y5X-Jx-tfN"/>
+                            </constraints>
+                        </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="8E3-om-PZ7">
-                            <rect key="frame" x="0.0" y="637" width="375" height="48"/>
+                            <rect key="frame" x="0.0" y="737" width="375" height="48"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdC-nm-hch">
@@ -36,7 +58,7 @@
                             <tableViewSection headerTitle="百貨店" id="ei7-1d-lls">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="iTE-6J-sJ1">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="128" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iTE-6J-sJ1" id="5Fe-iX-diX">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
@@ -64,7 +86,7 @@
                             <tableViewSection headerTitle="ショッピングセンター" id="eWW-x7-5PF">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="v7c-rG-gsH">
-                                        <rect key="frame" x="0.0" y="100" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="200" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v7c-rG-gsH" id="gp1-Gz-m3I">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
@@ -92,7 +114,7 @@
                             <tableViewSection headerTitle="アパレル" id="h4D-gT-fe7">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="105" id="EgF-Y2-gfb">
-                                        <rect key="frame" x="0.0" y="172" width="375" height="105"/>
+                                        <rect key="frame" x="0.0" y="272" width="375" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EgF-Y2-gfb" id="5yK-Oh-dk5">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="104.66666666666667"/>
@@ -124,7 +146,7 @@
                             <tableViewSection headerTitle="イベント" id="iSL-jA-VRa">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rJc-aM-YTy">
-                                        <rect key="frame" x="0.0" y="305" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="405" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rJc-aM-YTy" id="PDT-cY-sHG">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
@@ -152,7 +174,7 @@
                             <tableViewSection headerTitle="食品" id="Tc6-O3-DAU">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="edv-Wb-Ybq">
-                                        <rect key="frame" x="0.0" y="377" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="477" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="edv-Wb-Ybq" id="cQk-Rp-32v">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
@@ -180,7 +202,7 @@
                             <tableViewSection headerTitle="流通" id="d7h-Kc-PYJ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qXw-Iv-7bg">
-                                        <rect key="frame" x="0.0" y="449" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="549" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qXw-Iv-7bg" id="BJJ-xh-cFT">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
@@ -208,7 +230,7 @@
                             <tableViewSection headerTitle="化粧品" id="oL3-zw-p8f">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="G6F-Km-b6M">
-                                        <rect key="frame" x="0.0" y="521" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="621" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G6F-Km-b6M" id="fBg-jH-5ts">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
@@ -236,7 +258,7 @@
                             <tableViewSection headerTitle="インテリア" id="YKg-Wa-03l">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0f3-Od-hX6">
-                                        <rect key="frame" x="0.0" y="593" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="693" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0f3-Od-hX6" id="QNI-26-95B">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
@@ -273,6 +295,7 @@
                         <outlet property="eventcheckerSwitch" destination="41j-uo-9UZ" id="PJa-Kt-6QQ"/>
                         <outlet property="foodSwitch" destination="cZ6-Be-L8d" id="BdE-pO-Ehm"/>
                         <outlet property="googleNewsSwitch" destination="E1r-W2-2UD" id="pBG-qN-ipb"/>
+                        <outlet property="headerView" destination="p9X-dk-K2Q" id="4QK-Br-Dmb"/>
                         <outlet property="interiorSwitch" destination="nEs-Ap-uya" id="X8W-nl-HF1"/>
                         <outlet property="ryutsuSwitch" destination="pKf-Cv-Ww1" id="ELJ-CR-ZnS"/>
                         <outlet property="scSwitch" destination="wSQ-Gt-3uV" id="29g-wy-cgQ"/>

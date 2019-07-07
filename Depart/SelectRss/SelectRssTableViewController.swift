@@ -10,6 +10,7 @@ import UIKit
 
 class SelectRssTableViewController: UITableViewController {
 
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var googleNewsSwitch: UISwitch!
     @IBOutlet weak var scSwitch: UISwitch!
     @IBOutlet weak var apparelSwitch: UISwitch!
@@ -40,6 +41,7 @@ class SelectRssTableViewController: UITableViewController {
         let userDefaults = UserDefaults.standard
         let subscribeRss: [Int]? = userDefaults.array(forKey: SelectRssTableViewController.SUBSCRIBE_RSS) as? [Int]
         if let subscribeRss = subscribeRss {
+            
             submitButton.removeFromSuperview()
             
             if !subscribeRss.contains(Rss.depart.rawValue) {

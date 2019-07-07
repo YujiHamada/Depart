@@ -18,10 +18,13 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     var screenshotButton: UIBarButtonItem!
     var googleNews: GoogleNews?
     
+    var webViewFrame: CGRect!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         webView.navigationDelegate = self
+        webView.allowsBackForwardNavigationGestures = true
         let request = URLRequest(url: URL(string: url)!)
         webView.load(request)
         
@@ -49,7 +52,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     }
     
     @IBAction func screenshotButtonTapped() {
-        let webViewFrame = webView.frame
+        webViewFrame = webView.frame
         webView.frame = CGRect(x: webViewFrame.origin.x, y: webViewFrame.origin.y, width: webView.scrollView.contentSize.width, height: webView.scrollView.contentSize.height)
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(screenshot), userInfo: nil, repeats: false)
         
@@ -60,7 +63,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         self.webView.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image:UIImage = UIGraphicsGetImageFromCurrentImageContext()!;
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        
+        webView.frame = webViewFrame
         if let googleNews = googleNews {
             let path = self.fileInDocumentsDirectory(filename: googleNews.guid) + ".png"
             let pngImageData = image.pngData()
